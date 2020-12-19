@@ -1,7 +1,7 @@
 # Text Editor in java swing
 
 ### Hi there ...!
-In this project i've craeted text-editor using java-swing.
+In this project I've created Text-Editor using Java-swing.
 
 #Features
  
