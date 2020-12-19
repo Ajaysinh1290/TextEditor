@@ -1,4 +1,21 @@
-# Text Editor game in java swing
+# Text Editor in java swing
+
+### Hi there ...!
+In this project i've craeted text-editor using java-swing.
+
+#Features
+ 
+* Create file
+* Save file
+* Open file
+* Change text color
+* Change selection color
+* Print file
+* Change font style and size
+* Cut-Copy-Paste
+* Undo-Redo
+* Find word
+* Replace word
 
 # Youtube Demo
 
