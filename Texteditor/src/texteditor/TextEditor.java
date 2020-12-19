@@ -43,6 +43,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 import javax.swing.Timer;
+import javax.swing.UIManager;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.event.DocumentEvent;
@@ -120,6 +121,7 @@ public class TextEditor extends JFrame implements ActionListener
             public void run() {
                 try {
                     final TextEditor frame = new TextEditor();
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                     frame.setVisible(true);
                     frame.setLocation(200, 20);
                 }
@@ -241,14 +243,14 @@ public class TextEditor extends JFrame implements ActionListener
         this.menubarpanel.add(this.menubar);
         (this.mfile = new JMenu("File    ")).setForeground(Color.BLACK);
         this.mfile.setFont(new Font("NewsGoth BT", 1, 20));
-        this.mfile.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\file.png"));
+        this.mfile.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\file.png"));
         this.menubar.add(this.mfile);
         (this.open = new JMenuItem("Open")).setAccelerator(KeyStroke.getKeyStroke(79, 2));
         this.open.setHorizontalAlignment(2);
         this.open.setForeground(Color.BLACK);
         this.open.setBackground(Color.WHITE);
         this.open.setFont(new Font("NewsGoth BT", 0, 18));
-        this.open.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\openfile.png"));
+        this.open.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\openfile.png"));
         this.open.addActionListener(this);
         (this.newfile = new JMenuItem("New")).setHorizontalAlignment(2);
         this.newfile.setForeground(Color.BLACK);
@@ -256,7 +258,7 @@ public class TextEditor extends JFrame implements ActionListener
         this.newfile.setAccelerator(KeyStroke.getKeyStroke(78, 2));
         this.newfile.setFont(new Font("NewsGoth BT", 0, 18));
         this.newfile.addActionListener(this);
-        this.newfile.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\newfile.png"));
+        this.newfile.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\newfile.png"));
         this.mfile.add(this.newfile);
         (this.newwindow = new JMenuItem("New Window")).setAccelerator(KeyStroke.getKeyStroke(78, 3));
         this.newwindow.setHorizontalAlignment(2);
@@ -264,7 +266,7 @@ public class TextEditor extends JFrame implements ActionListener
         this.newwindow.setFont(new Font("NewsGoth BT", 0, 18));
         this.newwindow.setBackground(Color.WHITE);
         this.newwindow.addActionListener(this);
-        this.newwindow.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\newwindow.png"));
+        this.newwindow.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\newwindow.png"));
         this.mfile.add(this.newwindow);
         this.mfile.add(this.open);
         (this.save = new JMenuItem("Save")).setAccelerator(KeyStroke.getKeyStroke(83, 2));
@@ -272,7 +274,7 @@ public class TextEditor extends JFrame implements ActionListener
         this.save.setBackground(Color.WHITE);
         this.save.setHorizontalAlignment(2);
         this.save.setFont(new Font("NewsGoth BT", 0, 18));
-        this.save.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\savefile.png"));
+        this.save.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\savefile.png"));
         this.save.addActionListener(this);
         this.mfile.add(this.save);
         (this.saveas = new JMenuItem("Save As")).setAccelerator(KeyStroke.getKeyStroke(83, 3));
@@ -281,46 +283,46 @@ public class TextEditor extends JFrame implements ActionListener
         this.saveas.setHorizontalAlignment(2);
         this.saveas.setFont(new Font("NewsGoth BT", 0, 18));
         this.saveas.addActionListener(this);
-        this.saveas.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\saveas.png"));
+        this.saveas.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\saveas.png"));
         this.mfile.add(this.saveas);
         (this.print = new JMenuItem("Print")).setAccelerator(KeyStroke.getKeyStroke(80, 2));
         this.print.setBackground(Color.WHITE);
         this.print.setFont(new Font("NewsGoth BT", 0, 18));
-        this.print.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\print.png"));
+        this.print.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\print.png"));
         this.print.addActionListener(this);
         this.mfile.add(this.print);
         (this.exit = new JMenuItem("Exit")).setAccelerator(KeyStroke.getKeyStroke(27, 0));
         this.exit.setBackground(Color.WHITE);
         this.exit.setFont(new Font("NewsGoth BT", 0, 18));
         this.exit.addActionListener(this);
-        this.exit.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\exit.png"));
+        this.exit.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\exit.png"));
         final JLabel lblNewLabel_1 = new JLabel("                               ");
         this.mfile.add(lblNewLabel_1);
         this.mfile.add(this.exit);
         (this.medit = new JMenu("Edit    ")).setForeground(Color.BLACK);
         this.medit.setFont(new Font("NewsGoth BT", 1, 20));
-        this.medit.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\edit.png"));
+        this.medit.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\edit.png"));
         this.menubar.add(this.medit);
         (this.copy = new JMenuItem("Copy")).setAccelerator(KeyStroke.getKeyStroke(67, 2));
         this.copy.setBackground(Color.WHITE);
         this.copy.setHorizontalAlignment(2);
         this.copy.setFont(new Font("NewsGoth BT", 0, 18));
         this.copy.addActionListener(this);
-        this.copy.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\copy.png"));
+        this.copy.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\copy.png"));
         this.medit.add(this.copy);
         (this.cut = new JMenuItem("Cut")).setAccelerator(KeyStroke.getKeyStroke(88, 2));
         this.cut.setBackground(Color.WHITE);
         this.cut.setFont(new Font("NewsGoth BT", 0, 18));
         this.cut.setHorizontalAlignment(2);
         this.cut.addActionListener(this);
-        this.cut.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\cut.png"));
+        this.cut.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\cut.png"));
         this.medit.add(this.cut);
         (this.paste = new JMenuItem("Paste")).setAccelerator(KeyStroke.getKeyStroke(86, 2));
         this.paste.setFont(new Font("NewsGoth BT", 0, 18));
         this.paste.setBackground(Color.white);
         this.paste.setHorizontalAlignment(2);
         this.paste.addActionListener(this);
-        this.paste.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\paste.png"));
+        this.paste.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\paste.png"));
         this.medit.add(this.paste);
         (this.undo = new JMenuItem("Undo")).setAccelerator(KeyStroke.getKeyStroke(90, 2));
         this.undo.setFont(new Font("NewsGoth BT", 0, 18));
@@ -336,19 +338,19 @@ public class TextEditor extends JFrame implements ActionListener
         delete.setBackground(Color.WHITE);
         delete.setFont(new Font("NewsGoth BT", Font.PLAIN, 18));
         delete.addActionListener(this);
-        this.delete.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\delete.png"));
+        this.delete.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\delete.png"));
 
         medit.add(delete);
-        this.selectall.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\selectall.png"));
+        this.selectall.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\selectall.png"));
         this.medit.add(this.selectall);
-        this.undo.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\undo.png"));
+        this.undo.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\undo.png"));
         this.medit.add(this.undo);
         (this.redo = new JMenuItem("Redo")).setAccelerator(KeyStroke.getKeyStroke(89, 2));
         this.redo.setBackground(new Color(255, 255, 255));
         this.redo.setFont(new Font("NewsGoth BT", 0, 18));
         this.redo.addActionListener(this);
         this.redo.setBackground(Color.white);
-        this.redo.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\redo.png"));
+        this.redo.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\redo.png"));
         this.medit.add(this.redo);
         (this.find = new JMenuItem("Find")).setForeground(Color.BLACK);
         this.find.setBackground(Color.WHITE);
@@ -357,7 +359,7 @@ public class TextEditor extends JFrame implements ActionListener
         this.find.addActionListener(this);
         final JLabel lblNewLabel = new JLabel("                ");
         this.medit.add(lblNewLabel);
-        this.find.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\find.png"));
+        this.find.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\find.png"));
         this.medit.add(this.find);
         (this.replace = new JMenuItem("Replace")).setBackground(Color.WHITE);
         this.replace.setForeground(Color.BLACK);
@@ -365,65 +367,65 @@ public class TextEditor extends JFrame implements ActionListener
         this.replace.setFont(new Font("NewsGoth BT", 0, 18));
         this.medit.add(this.replace);
         this.replace.addActionListener(this);
-        this.replace.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\replace.png"));
+        this.replace.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\replace.png"));
         (this.mview = new JMenu("View    ")).setForeground(Color.BLACK);
         this.mview.setBackground(Color.WHITE);
         this.mview.setFont(new Font("NewsGoth BT", 1, 20));
-        this.mview.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\view.png"));
+        this.mview.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\view.png"));
         this.menubar.add(this.mview);
         (this.zoomin = new JMenuItem("Zoom In")).setForeground(Color.BLACK);
         this.zoomin.setBackground(Color.WHITE);
         this.zoomin.setFont(new Font("NewsGoth BT", 0, 18));
         this.zoomin.setAccelerator(KeyStroke.getKeyStroke(93, 2));
         this.zoomin.addActionListener(this);
-        this.zoomin.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\zoomin.png"));
+        this.zoomin.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\zoomin.png"));
         this.mview.add(this.zoomin);
         (this.zoomout = new JMenuItem("Zoom Out")).setForeground(Color.BLACK);
         this.zoomout.setBackground(Color.WHITE);
         this.zoomout.setAccelerator(KeyStroke.getKeyStroke(91, 2));
         this.zoomout.setFont(new Font("NewsGoth BT", 0, 18));
         this.zoomout.addActionListener(this);
-        this.zoomout.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\zoomout.png"));
+        this.zoomout.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\zoomout.png"));
         this.mview.add(this.zoomout);
         (this.defaultzoom = new JMenuItem("Default Zoom")).setForeground(Color.BLACK);
         this.defaultzoom.setBackground(Color.WHITE);
         this.defaultzoom.setAccelerator(KeyStroke.getKeyStroke(10, 2));
         this.defaultzoom.setFont(new Font("NewsGoth BT", 0, 18));
         this.defaultzoom.addActionListener(this);
-        this.defaultzoom.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\defaultzoom.png"));
+        this.defaultzoom.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\defaultzoom.png"));
         this.mview.add(this.defaultzoom);
         (this.mfont = new JMenu("Font     ")).setForeground(Color.BLACK);
         this.mfont.setFont(new Font("NewsGoth BT", 1, 20));
-        this.mfont.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\mfont.png"));
+        this.mfont.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\mfont.png"));
         this.menubar.add(this.mfont);
         (this.font = new JMenuItem("Font")).setBackground(Color.WHITE);
         this.font.setFont(new Font("NewsGoth BT", 0, 18));
         this.font.addActionListener(this);
-        this.font.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\font.png"));
+        this.font.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\font.png"));
         this.mfont.add(this.font);
         (this.defaultfont = new JMenuItem("Default Font")).setBackground(Color.WHITE);
         this.defaultfont.setFont(new Font("NewsGoth BT", 0, 18));
         this.defaultfont.addActionListener(this);
-        this.defaultfont.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\defaultfont.png"));
+        this.defaultfont.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\defaultfont.png"));
         this.mfont.add(this.defaultfont);
         (this.mcolor = new JMenu("Color     ")).setForeground(Color.BLACK);
         this.mcolor.setBackground(Color.WHITE);
         this.mcolor.setFont(new Font("NewsGoth BT", 1, 20));
-        this.mcolor.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\mcolor.png"));
+        this.mcolor.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\mcolor.png"));
         this.menubar.add(this.mcolor);
         (this.color = new JMenuItem("Text Color")).setBackground(Color.WHITE);
         this.color.setFont(new Font("NewsGoth BT", 0, 20));
         this.color.addActionListener(this);
-        this.color.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\color.png"));
+        this.color.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\color.png"));
         this.mcolor.add(this.color);
         (this.defaultcolor = new JMenuItem("Default Color")).setFont(new Font("NewsGoth BT", 0, 20));
         this.defaultcolor.setBackground(Color.WHITE);
-        this.defaultcolor.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\defaultcolor.png"));
+        this.defaultcolor.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\defaultcolor.png"));
         this.defaultcolor.addActionListener(this);
         (this.selectioncolor = new JMenuItem("Selection Color")).setFont(new Font("NewsGoth BT", 0, 20));
         this.selectioncolor.addActionListener(this);
         this.selectioncolor.setBackground(Color.white);
-        this.selectioncolor.setIcon(new ImageIcon("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\assets\\selectioncolor.png"));
+        this.selectioncolor.setIcon(new ImageIcon("F:\\Assets\\TextEditor\\selectioncolor.png"));
         this.mcolor.add(this.selectioncolor);
         this.mcolor.add(this.defaultcolor);
         if (!this.opensidebar) {
@@ -472,7 +474,8 @@ public class TextEditor extends JFrame implements ActionListener
         this.viewmenuaction(source);
         this.fontmenuaction(source);
         this.colormenuaction(source);
-        if (this.saveddata.length() == TextEditor.textarea.getText().length()) {
+        if (this.saveddata.compareTo(TextEditor.textarea.getText())==0)
+        {
             if (this.getTitle().charAt(0) == '*') {
                 this.setTitle(this.getTitle().substring(1));
             }
@@ -631,7 +634,7 @@ public class TextEditor extends JFrame implements ActionListener
         }
         else if (source == this.save) {
             if (this.savedfilename == "*Untitled" || this.savedfilename == "Untitled") {
-                final JFileChooser filechooser = new JFileChooser("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\file\\");
+                final JFileChooser filechooser = new JFileChooser("./file");
                 final int result2 = filechooser.showSaveDialog(null);
                 if (result2 == 0) {
                     try {
@@ -668,7 +671,7 @@ public class TextEditor extends JFrame implements ActionListener
             }
         }
         else if (source == this.saveas) {
-            final JFileChooser filechooser = new JFileChooser("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\file\\");
+            final JFileChooser filechooser = new JFileChooser("./file");
             final int result2 = filechooser.showSaveDialog(null);
             if (result2 == 0) {
                 try {
@@ -844,7 +847,7 @@ public class TextEditor extends JFrame implements ActionListener
     }
     
     public void openfile() {
-        final JFileChooser filechooser = new JFileChooser("C:\\Users\\Sohansinh Rathod\\eclipse-workspace\\Texteditor\\file");
+        final JFileChooser filechooser = new JFileChooser("./file");
         final int result = filechooser.showOpenDialog(this);
         if (result == 0) {
             try {
